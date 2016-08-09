@@ -7,11 +7,21 @@
 # Imports
 
 # Body
+def count_letters(word):
+	count = 0
+	for letter in word:
+		count += 1
+	return count
 
-
+def read_print():
+	fin = open('words.txt')
+	for line in fin:
+		word = line.strip()
+		if count_letters(word) > 20:
+			print(word)
 ##############################################################################
 def main():
-    pass  # Call your functions here.
+    read_print()  # Call your functions here.
 
 if __name__ == '__main__':
     main()
